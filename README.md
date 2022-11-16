@@ -15,7 +15,7 @@ to use this at mybinder.org:
 
 to run it again:
 
-press the up arrow *you will see the 'python mixer.py' command again* 
+press the up arrow *(you will see the 'python mixer.py' command again)*
 
 Then press return.
 
