@@ -2,100 +2,143 @@
 
 import random
 
-subjectSing=[
-"angel",
+subjectSing=["angel",
+"crown",
+"earth",
+"lion",
+"fire",
+"demon",
+"death",
 "goat",
 "horse",
 "locust",
+"mankind",
 "mouth",
+"plague",
+"river",
 "scorpion",
 "serpent",
 "star",
 "sun",
+"tree",
 "trumpet",
-"smell"
-]
+"smell",
+"you"]
 
-subjectPlur=[
-"angels",
+subjectPlur=["angels",
+"crowns",
+"fires",
+"demons",
+"deaths",
 "goats",
 "horses",
+"lions",
 "locusts",
+"mankind",
 "mouths",
+"plagues",
+"rivers",
 "scorpions",
 "serpents",
 "stars",
 "suns",
+"trees",
+"trumpets",
+"smells",
+"they",
+"you"]
+
+verbSing=["feels",
+"hears",
+"sees",
+"smells",
+"releases",
+"rushes",
+"rises"
+"strikes"]
+
+verbPlur=["feel",
+"hear",
+"kill",
+"see",
+"smell",
+"release",
+"rush",
+"rise",
+"strike",]
+
+verbCond=["can feel",
+"can hear",
+"can release",
+"can see",
+"can smell",
+"can rush",
+"can rise",
+"can strike",
+"will feel",
+"will hear",
+"will kill",
+"will release",
+"will see",
+"will smell",
+"will rush",
+"will rise",
+"will strike"]
+
+adjective=["blue",
+"golden",
+"red",
+"rising",
+"rushing",
+"sunny"]
+
+objectSing=["angel",
+"crown",
+"earth",
+"lion",
+"fire",
+"demon",
+"death",
+"goat",
+"horse",
+"locust",
+"mouth",
+"plague",
+"river",
+"scorpion",
+"serpent",
+"star",
+"sun",
+"tree",
+"trumpet",
+"smell",
+]
+
+objectPlur=["angels",
+"crowns",
+"fires",
+"demons",
+"deaths",
+"goats",
+"horses",
+"lions",
+"locusts",
+"mouths",
+"plagues",
+"rivers",
+"scorpions",
+"serpents",
+"stars",
+"suns",
+"trees",
 "trumpets",
 "smells",
 "they"
 ]
 
-verbSing=[
-"feels",
-"hears",
-"sees",
-"smells",
-"rushes",
-"rises"
-]
-
-verbPlur=[
-"feel",
-"hear",
-"see",
-"smell",
-"rush",
-"rise"
-]
-
-verbCond=[
-"can feel",
-"can hear",
-"can see",
-"can smell",
-"can rush",
-"can rise"
-]
-
-adjective=[
-"golden",
-"rising",
-"rushing",
-"sunny"
-]
-
-objectSing=[
-"angel",
-"goat",
-"horse",
-"locust",
-"mouth",
-"scorpion",
-"serpent",
-"star",
-"sun",
-"trumpet",
-"smell"
-]
-
-objectPlur=[
-"angels",
-"goats",
-"horses",
-"locusts",
-"mouths",
-"scorpions",
-"serpents",
-"stars",
-"suns",
-"trumpets",
-"smells"
-]
-
 articleSing=["the"]
 
-articlePlur=["the","some"]
+articlePlur=["the"]
 
 adverb=["now","soon"]
 
@@ -121,8 +164,7 @@ sentences=[
 ["As", "Ss", "Vc"],
 ["Av", "Sp", "Vc"],
 ["Av", "As", "Ss", "Av", "As", "Ss"],
-["Av", "Sp", "Vc", "Aj"]
-]
+["Av", "Sp", "Vc", "Aj"]]
 
 def Ss():
     #get singular subject
@@ -185,6 +227,10 @@ def Al():
 def An():
     return("and")
 
+def pickWord(wordList):
+    #get a random word from whichever word list is sent in (e.g. subjectSing)
+    return(random.choice(wordList))
+
 def pickSentence():
     #get a sentence from the list of sentence prototypes
     theSentence = random.choice(sentences)
@@ -193,10 +239,6 @@ def pickSentence():
 def getWord(functionString): 
     #use the string notation of the sentence prototype as a named function call
     return(globals()[functionString]())
-
-def pickWord(wordList):
-    #get a random word from whichever word list is sent in (e.g. subjectSing)
-    return(random.choice(wordList))
 
 def constructProphesy():
     #the oracle speaks!
@@ -211,12 +253,11 @@ def constructProphesy():
     for thisWord in theSentence:
         theProphesy = theProphesy + getWord(thisWord) + " "
         
-    #theProphesy = str(theSentence) + spacer + theProphesy #uncomment to see expanded string for debugging
+    theProphesy = str(theSentence) + spacer + theProphesy #uncomment to see expanded string for debugging
     return(theProphesy)
 
 for i in range(10):
     print(constructProphesy())
-
 
 
 
