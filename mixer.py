@@ -185,10 +185,6 @@ def Al():
 def An():
     return("and")
 
-def pickWord(wordList):
-    #get a random word from whichever word list is sent in (e.g. subjectSing)
-    return(random.choice(wordList))
-
 def pickSentence():
     #get a sentence from the list of sentence prototypes
     theSentence = random.choice(sentences)
@@ -197,6 +193,10 @@ def pickSentence():
 def getWord(functionString): 
     #use the string notation of the sentence prototype as a named function call
     return(globals()[functionString]())
+
+def pickWord(wordList):
+    #get a random word from whichever word list is sent in (e.g. subjectSing)
+    return(random.choice(wordList))
 
 def constructProphesy():
     #the oracle speaks!
@@ -220,7 +220,7 @@ for i in range(10):
 
 
 
-# %%
+
 
 
 
