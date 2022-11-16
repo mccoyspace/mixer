@@ -34,7 +34,6 @@ subjectPlur=["angels",
 "horses",
 "lions",
 "locusts",
-"mankind",
 "mouths",
 "plagues",
 "rivers",
@@ -50,6 +49,7 @@ subjectPlur=["angels",
 
 verbSing=["feels",
 "hears",
+"kills",
 "sees",
 "smells",
 "releases",
@@ -69,6 +69,7 @@ verbPlur=["feel",
 
 verbCond=["can feel",
 "can hear",
+"can kill",
 "can release",
 "can see",
 "can smell",
@@ -133,7 +134,6 @@ objectPlur=["angels",
 "trees",
 "trumpets",
 "smells",
-"they"
 ]
 
 articleSing=["the"]
@@ -146,7 +146,7 @@ sentences=[
 ["Sp", "Vc", "As", "Os"],       
 ["Sp", "Vp", "Ap", "Aj", "Op"],
 ["Sp", "Vc", "As", "Op", "Aj"],
-["Sp", "Vc", "As", "Op", "Vs", "Av"],
+["Sp", "Vc", "As", "Os", "Vs", "Av"],
 ["Sp", "Vp", "Op"],
 ["Sp", "Av", "Vc"],
 ["Sp", "Vp", "Aj", "Op"],
@@ -253,11 +253,13 @@ def constructProphesy():
     for thisWord in theSentence:
         theProphesy = theProphesy + getWord(thisWord) + " "
         
-    theProphesy = str(theSentence) + spacer + theProphesy #uncomment to see expanded string for debugging
+    #theProphesy = str(theSentence) + spacer + theProphesy #uncomment to see expanded string for debugging
     return(theProphesy)
 
 for i in range(10):
     print(constructProphesy())
+
+
 
 
 
