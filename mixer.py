@@ -54,7 +54,7 @@ verbSing=["feels",
 "smells",
 "releases",
 "rushes",
-"rises"
+"rises",
 "strikes"]
 
 verbPlur=["feel",
@@ -258,6 +258,7 @@ def constructProphesy():
 
 for i in range(10):
     print(constructProphesy())
+
 
 
 
