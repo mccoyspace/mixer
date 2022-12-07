@@ -8,7 +8,7 @@ to use this at mybinder.org:
 
 *select:* Terminal (near the bottom left)
 
-*type:* python mixer.py (then the return key)
+*type:* python mixer2.py (then the return key)
 
 
 **you will see a list of 10 prophesies**
